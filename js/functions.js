@@ -1,4 +1,4 @@
-function printMessage(msg){
+function printMessages(msg){
 	let div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
