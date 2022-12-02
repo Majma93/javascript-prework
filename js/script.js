@@ -1,3 +1,4 @@
 let computerMove = 'kamień';
 let playerMove = 'papier';
-printMessages('Zagrałem ' + computerMove + '! Jeśli Twoj ruch to ' + playerMove + ', to wygrywasz');
+printMessage('Zagrałem ' + computerMove + '! Jeśli Twoj ruch to ' + playerMove + ', to wygrywasz');
+let randomNumber = Math.floor(Math.random() * 3 + 1);

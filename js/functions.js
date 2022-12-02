@@ -1,9 +1,9 @@
-function printMessages(msg){
+function printMessage(msg){
 	let div = document.createElement('div');
 	div.innerHTML = msg;
-	document.getElementById('messages').appendChild(div);
+	document.getElementById('message').appendChild(div);
 }
 
 function clearMessages(){
-	document.getElementById('messages').innerHTML = '';
+	document.getElementById('message').innerHTML = '';
 }
