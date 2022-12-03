@@ -1,4 +1,4 @@
-let playerMove = 'papier';
+let playerMove;
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 let computerMove;
 
@@ -8,6 +8,18 @@ if (randomNumber == 1) {
     computerMove = 'papier';
 } else if (randomNumber == 3) {
     computerMove = 'nożyce';
+}
+
+let playerInput = prompt('Wybierz swój ruch: 1: kamień, 2: papier, 3: nożyce');
+
+if (playerInput == 1) {
+    playerMove = 'kamień';
+} else if (playerInput == 2 ) {
+    playerMove = 'papier';   
+} else if (playerInput == 3) {
+    playerMove = 'nożyce';
+} else {
+    printMessage('wybrałeś nieodpowiedni ruch');
 }
 
 printMessage('Zagrałem ' + computerMove + '! Jeśli Twoj ruch to ' + playerMove + ', to wygrywasz');
