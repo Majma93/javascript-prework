@@ -19,8 +19,35 @@ if (playerInput == 1) {
 } else if (playerInput == 3) {
     playerMove = 'nożyce';
 } else {
-    printMessage('wybrałeś nieodpowiedni ruch');
+    playerMove = 'nieodpowiedni ruch';
 }
 
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twoj ruch to ' + playerMove + ', to wygrywasz');
+let score;
+
+if (computerMove == 'kamień' && playerMove == 'kamień') {
+    score = 'Remis';
+} else if (computerMove == 'kamień' && playerMove == 'papier') {
+    score = 'Wygrałeś';
+} else if (computerMove == 'kamień' && playerMove == 'nożyce') {
+    score = 'Przegrałeś';
+} else if (computerMove == 'kamień' && playerMove == 'nieodpowiedni ruch') {
+    score = 'Zagraj jeszcze raz';
+} else if (computerMove == 'papier' && playerMove == 'kamień') {
+    score = 'Przegrałeś';
+} else if (computerMove == 'papier' && playerMove == 'papier') {
+    score = 'Remis';
+} else if (computerMove == 'papier' && playerMove == 'nożyce') {
+    score = 'Wygrałeś';
+} else if (computerMove == 'papier' && playerMove == 'nieodpowiedni ruch') {
+    score = 'Zagraj jeszcze raz';
+} else if (computerMove == 'nożyce' && playerMove == 'kamień') {
+    score = 'Wygrałeś';
+} else if (computerMove == 'nożyce' && playerMove == 'papier') {
+    score = 'Przegrałeś';
+} else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
+    score = 'Remis';
+} else if (computerMove == 'nożyce' && playerMove == 'nieodpowiedni ruch') {
+    score = 'Zagraj jeszcze raz';
+}
+printMessage('Komputer wybrał: ' + computerMove + ', Ty wbrałeś: ' + playerMove + ', Rezultat: ' + score);
 
