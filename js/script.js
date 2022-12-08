@@ -13,7 +13,7 @@ function getMoveName(argMoveId) {
 }      
 
 function displayResult(argComputerMove, argPlayerMove) {
-    
+    clearMessages();
     printMessage('Komputer wybrał ' + argComputerMove + ', Ty wybierasz ' + argPlayerMove + '.');
 
     if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
