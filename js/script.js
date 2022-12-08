@@ -1,5 +1,5 @@
-
-function getMoveName(argMoveId) {
+{
+const getMoveName = function(argMoveId) {
     if(argMoveId == 1){
         return 'kamień';
     } else if (argMoveId == 2) {
@@ -12,7 +12,7 @@ function getMoveName(argMoveId) {
     }
 }      
 
-function displayResult(argComputerMove, argPlayerMove) {
+const displayResult = function(argComputerMove, argPlayerMove) {
     clearMessages();
     printMessage('Komputer wybrał ' + argComputerMove + ', Ty wybierasz ' + argPlayerMove + '.');
 
@@ -35,13 +35,13 @@ function displayResult(argComputerMove, argPlayerMove) {
     }
 } 
 
-function playGame(playerInput) {
+const playGame = function(playerInput) {
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
 
-    let computerMove = getMoveName(randomNumber);
+    const computerMove = getMoveName(randomNumber);
 
-    let playerMove = getMoveName(playerInput);
+    const playerMove = getMoveName(playerInput);
 
     displayResult(computerMove, playerMove);
 }
@@ -51,3 +51,4 @@ document.getElementById('play-rock').addEventListener('click', function(){playGa
 document.getElementById('play-paper').addEventListener('click', function(){playGame(2)});
 
 document.getElementById('play-scissors').addEventListener('click', function(){playGame(3)});
+}
